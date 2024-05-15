@@ -17,5 +17,10 @@ namespace Library
             Author = author;
             Copies = copies;
         }
+
+        public void Borrow() => this.Copies--;
+        public void Return() => this.Copies++;
+
+
     }
 }

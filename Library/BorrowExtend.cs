@@ -8,11 +8,8 @@ namespace Library
 {
     internal class BorrowExtend : Borrow
     {
-        public BorrowExtend(Borrow borrow, DateOnly newExpirationDate)
+        public BorrowExtend(Borrow borrow, DateOnly newExpirationDate) : base(newExpirationDate, borrow.email, borrow.book)
         {
-            this.expirationDate = newExpirationDate;
-            this.email = borrow.email;
-            this.book = borrow.book;
         }
     }
 }
