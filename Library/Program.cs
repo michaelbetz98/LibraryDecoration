@@ -9,10 +9,12 @@
 
             Console.WriteLine(book.Copies);
             Borrow borrow = new Borrow(date, "tizio.gmail.com", book);
+            Borrow borrow2 = new Borrow(date, "tizio2.gmail.com", book);
+
             borrow.BorrowStart();
             Console.WriteLine("borrow started " + book.Copies);
-            borrow = new BorrowEmailNotification(borrow);
-            borrow = new BorrowExtend(borrow, date.AddMonths(1));
+            Borrow borrowEmailNotification = new BorrowEmailNotification(borrow);
+            Borrow borrowExtended = new BorrowExtend(borrowEmailNotification, date.AddMonths(1));
             Console.WriteLine("borrow extended " + book.Copies);
             borrow.BorrowEnd();
             Console.WriteLine("borrow ended "+book.Copies);

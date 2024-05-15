@@ -11,5 +11,8 @@ namespace Library
         public BorrowExtend(Borrow borrow, DateOnly newExpirationDate) : base(newExpirationDate, borrow.email, borrow.book)
         {
         }
+
+        //metodo estensione-- non posso metterlo perche non c'è nela classe Borrow, posso fare solo tramite costruttoie
+
     }
 }
